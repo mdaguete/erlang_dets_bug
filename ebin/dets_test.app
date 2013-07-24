@@ -1,0 +1,9 @@
+{application,dets_test,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{dets_test_app,[]}},
+              {env,[]},
+              {modules,[dets_test,dets_test_app,dets_test_server,
+                        dets_test_sup,dqueue]}]}.

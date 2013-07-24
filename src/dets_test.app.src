@@ -1,0 +1,12 @@
+{application, dets_test,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { dets_test_app, []}},
+  {env, []}
+ ]}.
