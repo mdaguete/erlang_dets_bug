@@ -15,6 +15,7 @@ I've enabled debug macro in dets*.erl and the following is printed in R16B:
 * no traverse version
 
 ~~~
+
 OTP Version "R16B"
 alloc of size 2047 to address 1336, table 12 (2048 bytes)
 alloc of size 2047 to address 3384, table 12 (2048 bytes)
@@ -31,11 +32,13 @@ alloc of size 512021 to address 4199736, table 20 (524288 bytes)
 alloc of size 512021 to address 4724024, table 20 (524288 bytes)
 
  <skipped>
-~~
+ 
+~~~
 
 * traverse version
 
 ~~~
+
 OTP Version "R16B"
 alloc of size 2047 to address 1336, table 12 (2048 bytes)
 alloc of size 2047 to address 3384, table 12 (2048 bytes)
@@ -64,6 +67,7 @@ alloc of size 512021 (fixed) to address 4724024, table 20 (524288 bytes)
 
 
  <skipped>
+ 
 ~~~
 
 
