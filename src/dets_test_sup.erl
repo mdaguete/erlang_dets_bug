@@ -24,5 +24,6 @@ start_link() ->
 
 init([]) ->
     TestServer = ?CHILD(dets_test_server,worker),
-    {ok, { {one_for_one, 5, 10}, [TestServer]} }.
+    TestServer2 = ?CHILD(dets_test_server2,worker),
+    {ok, { {one_for_one, 5, 10}, [TestServer,TestServer2]} }.
 
