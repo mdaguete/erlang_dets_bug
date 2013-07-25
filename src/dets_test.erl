@@ -31,8 +31,13 @@ test(N,Mod) ->
 
 traverse_test(N) ->
   {ok,Name} = dets:open_file(traverse,[{file,"dets_traverse.q"},{repair,force},{type,set}]),
-  F = fun(X) -> {continue, X} end,
-  dets:traverse(Name,F),
+  F = fun(X) -> {continue,X} end,
+  case dets:traverse(Name,F) of
+    {error,Reason} ->
+      io:format("Error traversing dets file ~p~n",[Reason]);
+    _ ->
+      io:format("Traverse ok~n")
+  end,
   %Now Write 1 object with 500 KB size
   dwriter(Name,N),
   %Print info about dets file.
